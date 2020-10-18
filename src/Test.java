@@ -1,11 +1,30 @@
+import java.util.Scanner;
+
 public class Test {
     public static void main(String[] args) {
         Employee[] employees = new Employee[3];
-        employees[0] = new Employee("Klaudia", "Pawłat", 5000);
-        employees[1] = new Employee("Król", "Julian", 10000);
-        employees[2] = new Employee("Jan", "Kowalski", 2100);
+        Scanner sc = new Scanner(System.in);
+        employees[0] = new Employee();
+        employees[1] = new Employee();
+        employees[2] = new Employee();
 
-        System.out.println("The total remuneration is: " + (employees[0].getSalary() + employees[1].getSalary() +
-                employees[2].getSalary()));
+        for (int i = 0; i < employees.length; i++) {
+            System.out.print("Podaj imie: ");
+            employees[i].setName(sc.nextLine());
+            System.out.print("Podaj nazwisko: ");
+            employees[i].setSurname(sc.nextLine());
+            System.out.print("Podaj wynagrodzenie: ");
+            employees[i].setSalary(sc.nextDouble());
+            sc.nextLine();
+        }
+
+        double totalSalary = 0;
+        for (int i = 0; i < employees.length; i++) {
+            totalSalary = totalSalary + employees[i].getSalary();
+        }
+
+        System.out.println("Total salary: " + totalSalary);
+
+
     }
 }

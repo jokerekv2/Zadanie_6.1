@@ -3,6 +3,9 @@ public class Employee {
     private String surname;
     private double salary;
 
+    public Employee() {
+    }
+
     public Employee(String name, String surname, double salary) {
         this.name = name;
         this.surname = surname;
