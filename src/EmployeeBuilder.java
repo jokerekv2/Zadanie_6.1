@@ -1,9 +1,10 @@
 import java.util.Scanner;
 
-public class Tools {
+public class EmployeeBuilder {
+    EmployeeFinanceCalculator calculator = new EmployeeFinanceCalculator();
     Scanner sc = new Scanner(System.in);
 
-    public void addEmployee(Employee[] employees) {
+    public void fillWithEmployees(Employee[] employees) {
         for (int i = 0; i < employees.length; i++) {
             employees[i] = dataReader();
         }
@@ -20,11 +21,5 @@ public class Tools {
         return new Employee(name, surname, salary);
     }
 
-    public double totalSalary(Employee[] employees) {
-        double totalSalary = 0;
-        for (int i = 0; i < employees.length; i++) {
-            totalSalary = totalSalary + employees[i].getSalary();
-        }
-        return totalSalary;
-    }
+
 }
