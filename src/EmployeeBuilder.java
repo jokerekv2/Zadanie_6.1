@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 public class EmployeeBuilder {
-    EmployeeFinanceCalculator calculator = new EmployeeFinanceCalculator();
     Scanner sc = new Scanner(System.in);
 
     public void fillWithEmployees(Employee[] employees) {
