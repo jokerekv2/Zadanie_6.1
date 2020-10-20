@@ -6,11 +6,11 @@ public class Company {
     private Employee[] employees = new Employee[MAX_EMPLOYEES];
     private EmployeeBuilder employeeBuilder = new EmployeeBuilder();
 
-    public void addEmployee() {
+    public void addEmployees() {
         employeeBuilder.fillWithEmployees(employees);
     }
 
-    public Employee getIndexOfEmployee(int index) {
+    public Employee getEmployee(int index) {
         return employees[index - 1];
     }
 
